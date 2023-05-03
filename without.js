@@ -1,34 +1,34 @@
-const assertArraysEqual=function(first,second){
-  if(eqArrays(first,second)){
+const assertArraysEqual = function(first,second) {
+  if (eqArrays(first,second)) {
     let green = '\u{1F7E2}';
     return console.log(`${green}${green}${green} Assertion Passed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
   }
-    let red = '\u{1F534}';
-    return console.log(`${red}${red}${red} Assertion Failed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
+  let red = '\u{1F534}';
+  return console.log(`${red}${red}${red} Assertion Failed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
 };
 
-const eqArrays=function(firstArray,SecondArray){
-  if (firstArray.length!==SecondArray.length){
+const eqArrays = function(firstArray,SecondArray) {
+  if (firstArray.length !== SecondArray.length) {
     return false;
   }
-  for (var i=0;i<firstArray.length;i++){
-    if(firstArray[i]!==SecondArray[i]){
+  for (let i = 0; i < firstArray.length; i++) {
+    if (firstArray[i] !== SecondArray[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
-const without=function(one,two){
-  let finalArray=one;
-  for (var i=0;i<two.length;i++){
-    for (var y=0;y<finalArray.length;y++){
-      if(one[y]===two[i]){
-      finalArray.splice(y,1)
-  }
-}
-  }return finalArray;
-}
+const without = function(one,two) {
+  let finalArray = one;
+  for (let i = 0; i < two.length; i++) {
+    for (let y = 0; y < finalArray.length; y++) {
+      if (one[y] === two[i]) {
+        finalArray.splice(y,1);
+      }
+    }
+  } return finalArray;
+};
 //console.log(without([1, 2, 3], [1])) // => [2, 3]
 //console.log(without(["1", "2", "3"], [1, 2, "3"]))
 //

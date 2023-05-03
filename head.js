@@ -7,9 +7,9 @@ const assertEqual = function(actual, expected) {
   let red = '\u{1F534}';
   return console.log(`${red}${red}${red} Assertion failed: ${actual}===${expected}`);
 };
-const head= function(array){
+const head = function(array) {
   return array[0];
-}
+};
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hell");

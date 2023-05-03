@@ -8,22 +8,22 @@ const assertEqual = function(actual, expected) {
   return console.log(`${red}${red}${red} Assertion Failed: ${actual}===${expected}`);
 };
 
-const eqArrays=function(firstArray,SecondArray){
-  if (firstArray.length!==SecondArray.length){
+const eqArrays = function(firstArray,SecondArray) {
+  if (firstArray.length !== SecondArray.length) {
     return false;
   }
-  for (var i=0;i<firstArray.length;i++){
-    if(firstArray[i]!==SecondArray[i]){
+  for (let i = 0; i < firstArray.length; i++) {
+    if (firstArray[i] !== SecondArray[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
+console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
+console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true)
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true)
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
