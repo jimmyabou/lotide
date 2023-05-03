@@ -28,7 +28,7 @@ const eqArrays=function(firstArray,SecondArray){
 //assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
 const assertArraysEqual=function(first,second){
-  if(eqArrays(first,second)===true){
+  if(eqArrays(first,second)){
     let green = '\u{1F7E2}';
     return console.log(`${green}${green}${green} Assertion Passed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
   }
@@ -40,4 +40,4 @@ const assertArraysEqual=function(first,second){
 assertArraysEqual([1, 2, 3], [1, 2, 3]) // => true
 assertArraysEqual([1, 2, 3], [3, 2, 1]) // => false
 assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) // => true)
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]) // => false
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]) // => false 
