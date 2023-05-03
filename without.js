@@ -20,10 +20,10 @@ const eqArrays = function(firstArray,SecondArray) {
 };
 
 const without = function(one,two) {
-  let finalArray = one;
+  let finalArray = one.slice();
   for (let i = 0; i < two.length; i++) {
     for (let y = 0; y < finalArray.length; y++) {
-      if (one[y] === two[i]) {
+      if (finalArray[y] === two[i]) {
         finalArray.splice(y,1);
       }
     }
@@ -34,6 +34,6 @@ const without = function(one,two) {
 //
 //console.log(without([1, 2, 3], [3, 2, 1]))
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
+console.log(without(words, ["lighthouse","world"])); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
