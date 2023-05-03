@@ -20,27 +20,27 @@ const assertArraysEqual = function(first,second) {
 
 // ACTUAL FUNCTION
 const middle = function(array) {
-  if (array.length<3){
+  if (array.length < 3) {
     return "error";
   }
-  if (array.length%2===0){
-    let index=array.length/2
-    let arr=array.slice(index-1,index+1);
+  if (array.length % 2 === 0) {
+    let index = array.length / 2;
+    let arr = array.slice(index - 1,index + 1);
     return arr;
   }
-  if (array.length%2===1){
-    let index=Math.floor(array.length/2);
-     let arr=array.slice(index,index+1);
+  if (array.length % 2 === 1) {
+    let index = Math.floor(array.length / 2);
+    let arr = array.slice(index,index + 1);
     return arr;
   }
 };
 
 // TEST CODE
 console.log(middle([1,2,3,4,5,6,7]));
-console.log(assertArraysEqual (middle([1,2,3,4,5,6,7]),[4]));
+console.log(assertArraysEqual(middle([1,2,3,4,5,6,7]),[4]));
 
 console.log(middle([1,2,3,4,5,6]));
-console.log(assertArraysEqual (middle([1,2,3,4,5,6]),[3,4]));
+console.log(assertArraysEqual(middle([1,2,3,4,5,6]),[3,4]));
 
 console.log(middle([1,2]));
-console.log(assertArraysEqual (middle([1,2]),"error"));
+console.log(assertArraysEqual(middle([1,2]),"error"));
