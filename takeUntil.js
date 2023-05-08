@@ -34,10 +34,11 @@ const takeUntil = function(array, callback) {
   } return results;
 };
 const results = takeUntil(data2, x => x === ',');
-console.log(results);
+module.exports=takeUntil;
+//console.log(results);
 
-assertArraysEqual(results, [ "I've", 'been', 'to', 'Hollywood' ]);
-assertArraysEqual(takeUntil(data3, x => x === 'an'), ["This","is"]);
+//assertArraysEqual(results, [ "I've", 'been', 'to', 'Hollywood' ]);
+//assertArraysEqual(takeUntil(data3, x => x === 'an'), ["This","is"]);
 
 //const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 //const results1 = takeUntil(data1, x => x < 0);

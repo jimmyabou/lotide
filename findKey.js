@@ -29,6 +29,7 @@ let result = findKey({
   "Ora":       { stars: 0 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2);
-console.log(result);
+//console.log(result);
 
-assertEqual(result,"noma");
+//assertEqual(result,"noma");
+module.exports=findKey;
