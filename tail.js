@@ -1,5 +1,5 @@
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
+
 
 const tail = function(array) {
   let tailArr = array.slice(1);
