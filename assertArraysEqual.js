@@ -8,17 +8,17 @@
 //  return console.log(`${red}${red}${red} Assertion Failed: ${actual}===${expected}`);
 //};
 
-const eqArrays = function(firstArray,SecondArray) {
-  if (firstArray.length !== SecondArray.length) {
-    return false;
-  }
-  for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== SecondArray[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+//const eqArrays = function(firstArray,SecondArray) {
+//  if (firstArray.length !== SecondArray.length) {
+//    return false;
+//  }
+//  for (let i = 0; i < firstArray.length; i++) {
+//    if (firstArray[i] !== SecondArray[i]) {
+//      return false;
+//    }
+//  }
+//  return true;
+//};
 
 //eqArrays([1, 2, 3], [1, 2, 3]) // => true
 //eqArrays([1, 2, 3], [3, 2, 1]) // => false
@@ -26,7 +26,7 @@ const eqArrays = function(firstArray,SecondArray) {
 //eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
 
 //assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
+const eqArrays = require("./eqArrays");
 const assertArraysEqual = function(first,second) {
   if (eqArrays(first,second)) {
     let green = '\u{1F7E2}';
@@ -35,9 +35,9 @@ const assertArraysEqual = function(first,second) {
   let red = '\u{1F534}';
   return console.log(`${red}${red}${red} Assertion Failed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
 };
+module.exports=assertArraysEqual;
 
-
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true)
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+//assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+//assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+//assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true)
+//assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
