@@ -35,7 +35,7 @@ const assertArraysEqual = function(first,second) {
   let red = '\u{1F534}';
   return console.log(`${red}${red}${red} Assertion Failed: ${JSON.stringify(first)}===${JSON.stringify(second)}`);
 };
-module.exports=assertArraysEqual;
+module.exports = assertArraysEqual;
 
 //assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
 //assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false

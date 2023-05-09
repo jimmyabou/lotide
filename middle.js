@@ -33,7 +33,7 @@ const middle = function(array) {
   let arr = array.slice(index,index + 1);
   return arr;
 };
-module.exports=middle;
+module.exports = middle;
 // TEST CODE
 //console.log(middle([1,2,3,4,5,6,7]));
 //console.log(assertArraysEqual(middle([1,2,3,4,5,6,7]),[4]));

@@ -34,7 +34,7 @@ const takeUntil = function(array, callback) {
   } return results;
 };
 const results = takeUntil(data2, x => x === ',');
-module.exports=takeUntil;
+module.exports = takeUntil;
 //console.log(results);
 
 //assertArraysEqual(results, [ "I've", 'been', 'to', 'Hollywood' ]);

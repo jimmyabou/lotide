@@ -21,19 +21,19 @@ const assertArraysEqual = function(first,second) {
 
 const letterPositions = function(sentence) {
   let results = {};
-  let array=[];
+  let array = [];
   
-  for(let i = 0; i < sentence.length; i++){
-    let letter =sentence[i];
+  for (let i = 0; i < sentence.length; i++) {
+    let letter = sentence[i];
     console.log(letter);
-    if (results[letter]===undefined){
-        results[letter]=[];
+    if (results[letter] === undefined) {
+      results[letter] = [];
     }
-   results[letter].push(i);
+    results[letter].push(i);
   }
   console.log(results);
   return results;
 };
 
 //assertArraysEqual(letterPositions("hello").e, [1]);
-module.exports=letterPositions;
+module.exports = letterPositions;
